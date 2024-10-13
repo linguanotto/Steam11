@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Sections</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section id="portfolio" class="section-bg">
+        <div class="container" data-aos="fade-up">
+  
+          <header class="section-header">
+            <h3 class="section-title">Projetos</h3>
+          </header>
+  
+  
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+  
+         <!-- Exemplo de Imagem -->
+  <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+    <div class="portfolio-wrap">
+      <figure>
+        <img src="assets/img/portfolio/app1.jpg" class="img-fluid vertical-media" alt="">
+        <a href="#" data-title="App 1" class="link-preview" onclick="event.preventDefault(); openPopup('assets/img/portfolio/app1.jpg')"><i class="bi bi-plus"></i></a>
+        <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+      </figure>
+    </div>
+  </div>
+  
+  <!-- Exemplo de Vídeo -->
+  <div class="col-lg-4 col-md-6 portfolio-item filter-video">
+    <div class="portfolio-wrap">
+      <figure>
+        <video class="img-fluid vertical-media" muted playsinline id="video1">
+          <source src="assets/video/Jackito.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <a href="#" data-title="Video 1" class="link-preview" onclick="event.preventDefault(); openPopup('assets/video/Jackito.mp4', true)"><i class="bi bi-plus"></i></a>
+        <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+      </figure>
+    </div>
+  </div>
+  
+  <!-- Pop-up -->
+  <div id="popup" class="popup" onclick="closePopup()">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div class="popup-content">
+      <img id="popup-image" src="" alt="" style="display: none;">
+      <video id="popup-video" controls style="display: none;">
+        <source id="popup-video-source" src="" type="video/mp4">
+        Seu navegador não suporta vídeos.
+      </video>
+    </div>
+  </div>
+  
+  
+        </div>
+        
+  
+          
+  
+        </div>
+  
+        </div>
+
+        <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+      
+</body>
+
+<script>
+    const video = document.getElementById('video1');
+  
+    // Pausa o vídeo inicialmente
+    video.pause();
+  
+    // Reproduz o vídeo quando o mouse estiver sobre ele
+    video.addEventListener('mouseover', function() {
+      video.play();
+    });
+  
+    // Pausa o vídeo quando o mouse sai
+    video.addEventListener('mouseout', function() {
+      video.pause();
+    });
+  
+    function openPopup(mediaSrc, isVideo = false) {
+    const popup = document.getElementById('popup');
+    const popupImage = document.getElementById('popup-image');
+    const popupVideo = document.getElementById('popup-video');
+    const popupVideoSource = document.getElementById('popup-video-source');
+  
+    if (isVideo) {
+      popupImage.style.display = 'none'; // Oculta a imagem
+      popupVideo.style.display = 'block'; // Exibe o vídeo
+      popupVideoSource.src = mediaSrc; // Define a fonte do vídeo
+      popupVideo.load(); // Carrega o vídeo
+    } else {
+      popupVideo.style.display = 'none'; // Oculta o vídeo
+      popupImage.style.display = 'block'; // Exibe a imagem
+      popupImage.src = mediaSrc; // Define a fonte da imagem
+    }
+  
+    popup.style.display = 'flex'; // Exibe o pop-up com flex
+  }
+  
+  function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none'; // Oculta o pop-up
+  }
+  
+  </script>
