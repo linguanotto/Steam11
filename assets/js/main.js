@@ -1,10 +1,4 @@
-/**
-* Template Name: BizPage
-* Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
@@ -243,15 +237,26 @@
   new Swiper('.portfolio-details-slider', {
     speed: 400,
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
+    watchOverflow: true, // Garante que o botão não desapareça
+    observer: true, // Observa mudanças nos slides
+    observeSlideChildren: true, // Observa mudanças nas crianças dos slides
+    
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    }
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    
+
+   
+
+    
   });
 
   /**

@@ -14,7 +14,8 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -43,10 +44,10 @@
 
           <nav id="navbar" class="navbar">
             <ul>
-                  
-                
+
+
               </li>
-                          </ul>
+            </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
         </div>
@@ -62,11 +63,13 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+
+          <!-- ======= Nome do Projeto ======= -->
+          <h2>Otto Jackito</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li>Portfolio Details</li>
+
+            <li>Detalhes do Projeto</li>
           </ol>
         </div>
 
@@ -82,38 +85,50 @@
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
+    
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img src="assets/Projetos/Jachito/din.jpeg" alt="">
+                </div>
+    
+                    
+                <div class="swiper-slide">
+                  <img src="assets/Projetos/Jachito/portada.jpeg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                  <img src="assets/Projetos/Jachito/maxresdefault.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <video controls autoplay muted loop style="width: 100%;">
+                    <source src="assets/Projetos/Jachito/Jackito.mp4" type="video/mp4">
+                    Seu navegador não suporta a exibição de vídeos.
+                  </video>
                 </div>
-
+    
               </div>
+              <!-- Coloque os botões de navegação fora do swiper-wrapper -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
+          
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Informações do projeto</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Categoria</strong>: Impressão 3D / arduino / eletrica</li>
+                <li><strong>Materiais</strong>: Servo motor, jumpers, arduino nano, ponte H, buzzer  </li>
+                <li><strong>Material de apoio</strong>: <a href="https://drive.google.com/file/d/1_dz76CL_VddQ04HK8f2CLjeM-vXMOFZ3/view?usp=drive_link" target="_blank">Manual de montagem </a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Otto Jackito </h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                Entender como um robô é projetado é a melhor maneira de começar a criar seus personagens favoritos com impressão 3D.
+                O formato muito básico (um cubo) deixa espaço para criatividade e personalização, leve sua imaginação ao próximo nível.
               </p>
             </div>
           </div>
@@ -133,10 +148,11 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>STEAM 11</h3>
-            <p>Transformando a educação através de projetos práticos e divertidos em STEAM. Nossa missão é tornar a aprendizagem acessível e envolvente para todas as idades.</p>
+            <p>Transformando a educação através de projetos práticos e divertidos em STEAM. Nossa missão é tornar a
+              aprendizagem acessível e envolvente para todas as idades.</p>
           </div>
 
-                </div>
+        </div>
       </div>
     </div>
 
@@ -156,7 +172,8 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
 
@@ -184,38 +201,38 @@
   video.pause();
 
   // Reproduz o vídeo quando o mouse estiver sobre ele
-  video.addEventListener('mouseover', function() {
+  video.addEventListener('mouseover', function () {
     video.play();
   });
 
   // Pausa o vídeo quando o mouse sai
-  video.addEventListener('mouseout', function() {
+  video.addEventListener('mouseout', function () {
     video.pause();
   });
 
   function openPopup(mediaSrc, isVideo = false) {
-  const popup = document.getElementById('popup');
-  const popupImage = document.getElementById('popup-image');
-  const popupVideo = document.getElementById('popup-video');
-  const popupVideoSource = document.getElementById('popup-video-source');
+    const popup = document.getElementById('popup');
+    const popupImage = document.getElementById('popup-image');
+    const popupVideo = document.getElementById('popup-video');
+    const popupVideoSource = document.getElementById('popup-video-source');
 
-  if (isVideo) {
-    popupImage.style.display = 'none'; // Oculta a imagem
-    popupVideo.style.display = 'block'; // Exibe o vídeo
-    popupVideoSource.src = mediaSrc; // Define a fonte do vídeo
-    popupVideo.load(); // Carrega o vídeo
-  } else {
-    popupVideo.style.display = 'none'; // Oculta o vídeo
-    popupImage.style.display = 'block'; // Exibe a imagem
-    popupImage.src = mediaSrc; // Define a fonte da imagem
+    if (isVideo) {
+      popupImage.style.display = 'none'; // Oculta a imagem
+      popupVideo.style.display = 'block'; // Exibe o vídeo
+      popupVideoSource.src = mediaSrc; // Define a fonte do vídeo
+      popupVideo.load(); // Carrega o vídeo
+    } else {
+      popupVideo.style.display = 'none'; // Oculta o vídeo
+      popupImage.style.display = 'block'; // Exibe a imagem
+      popupImage.src = mediaSrc; // Define a fonte da imagem
+    }
+
+    popup.style.display = 'flex'; // Exibe o pop-up com flex
   }
 
-  popup.style.display = 'flex'; // Exibe o pop-up com flex
-}
-
-function closePopup() {
-  const popup = document.getElementById('popup');
-  popup.style.display = 'none'; // Oculta o pop-up
-}
+  function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none'; // Oculta o pop-up
+  }
 
 </script>
